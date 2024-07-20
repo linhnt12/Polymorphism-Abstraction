@@ -50,7 +50,7 @@ public class Main {
         }
     }
 
-    public static void nhapMonHoc() {
+    private static void nhapMonHoc() {
         System.out.print("Nhập số lượng môn học: ");
         int slMonHoc = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < slMonHoc; i++) {
@@ -67,14 +67,14 @@ public class Main {
         }
     }
 
-    public static void inDsMonHoc() {
+    private static void inDsMonHoc() {
         System.out.println("Danh sách môn học:");
         for (int i=0; i<cntMonHoc; i++) {
             System.out.println(dsMonHoc[i]);
         }
     }
 
-    public static void nhapGiangVien() {
+    private static void nhapGiangVien() {
         System.out.print("Nhập số lượng giảng viên: ");
         int slGV = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < slGV; i++) {
@@ -113,14 +113,14 @@ public class Main {
         }
     }
 
-    public static void inDsGiangVien() {
+    private static void inDsGiangVien() {
         System.out.println("Danh sách giảng viên:");
         for (int i=0; i<cntGiangVien; i++) {
             System.out.println(dsGiangVien[i]);
         }
     }
 
-    public static void lapBangKeKhai() {
+    private static void lapBangKeKhai() {
         System.out.print("Nhập mã giảng viên: ");
         int maGV = Integer.parseInt(sc.nextLine());
         GiangVien giangVien = null;
@@ -169,12 +169,12 @@ public class Main {
         }
     }
 
-    public static void inBangKeKhai() {
+    private static void inBangKeKhai() {
         System.out.println("Danh sách kê khai giảng dạy: ");
         for (int i=0; i<cntQLGiangDay; i++) System.out.println(qlGiangDays[i]);
     }
 
-    public static void sapXepTheoTen() {
+    private static void sapXepTheoTen() {
         if (cntQLGiangDay > 1) {
             for (int i=0; i<cntQLGiangDay-1; i++) {
                 for (int j=i+1; j<cntQLGiangDay; j++) {
@@ -190,7 +190,7 @@ public class Main {
         inBangKeKhai();
     }
 
-    public static void sapXepTheoSoTiet() {
+    private static void sapXepTheoSoTiet() {
         if (cntQLGiangDay > 1) {
             for (int i=0; i<cntQLGiangDay-1; i++) {
                 for (int j=i+1; j<cntQLGiangDay; j++) {
@@ -206,7 +206,7 @@ public class Main {
         inBangKeKhai();
     }
 
-    public static void bangTinhCong() {
+    private static void bangTinhCong() {
         System.out.println("Bảng tính công giảng viên: ");
 
         for (int i = 0; i < cntQLGiangDay; i++) {
