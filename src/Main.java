@@ -175,26 +175,30 @@ public class Main {
     }
 
     public static void sapXepTheoTen() {
-        for (int i=0; i<cntQLGiangDay-1; i++) {
-            for (int j=i+1; j<cntQLGiangDay; j++) {
-                if (qlGiangDays[i].getGiangVien().getHoTen().compareToIgnoreCase(qlGiangDays[j].getGiangVien().getHoTen()) < 0) {
-                    QLGiangDay temp = qlGiangDays[i];
-                    qlGiangDays[i] = qlGiangDays[j];
-                    qlGiangDays[j] = temp;
+        if (cntQLGiangDay > 1) {
+            for (int i=0; i<cntQLGiangDay-1; i++) {
+                for (int j=i+1; j<cntQLGiangDay; j++) {
+                    if (qlGiangDays[i].getGiangVien().getHoTen().compareToIgnoreCase(qlGiangDays[j].getGiangVien().getHoTen()) < 0) {
+                        QLGiangDay temp = qlGiangDays[i];
+                        qlGiangDays[i] = qlGiangDays[j];
+                        qlGiangDays[j] = temp;
+                        }
+                    }
                 }
-            }
         }
         System.out.println("Danh sách kê khai sắp xếp theo họ tên giảng viên:");
         inBangKeKhai();
     }
 
     public static void sapXepTheoSoTiet() {
-        for (int i=0; i<cntQLGiangDay-1; i++) {
-            for (int j=i+1; j<cntQLGiangDay; j++) {
-                if (qlGiangDays[i].getTotal() < qlGiangDays[j].getTotal()) {
-                    QLGiangDay temp = qlGiangDays[i];
-                    qlGiangDays[i] = qlGiangDays[j];
-                    qlGiangDays[j] = temp;
+        if (cntQLGiangDay > 1) {
+            for (int i=0; i<cntQLGiangDay-1; i++) {
+                for (int j=i+1; j<cntQLGiangDay; j++) {
+                    if (qlGiangDays[i].getTotal() < qlGiangDays[j].getTotal()) {
+                        QLGiangDay temp = qlGiangDays[i];
+                        qlGiangDays[i] = qlGiangDays[j];
+                        qlGiangDays[j] = temp;
+                    }
                 }
             }
         }
